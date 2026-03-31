@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lviv Tax Bonus</title>
+<style>
+body{font-family:Arial, sans-serif;margin:0;background:#0b0f14;color:white}
+.container{width:90%;max-width:1100px;margin:auto}
+header{padding:80px 0;text-align:center;background:linear-gradient(135deg,#0f172a,#1e293b)}
+h1{font-size:48px;margin-bottom:10px}
+button{background:#38bdf8;border:none;padding:15px 30px;border-radius:8px;font-size:18px;cursor:pointer}
+section{padding:60px 0}
+.cards{display:flex;gap:20px;flex-wrap:wrap}
+.card{background:#111827;padding:25px;border-radius:12px;flex:1;min-width:250px}
+form{background:#111827;padding:30px;border-radius:12px}
+input,select{width:100%;padding:12px;margin:10px 0;border-radius:6px;border:none}
+footer{background:#020617;padding:30px;text-align:center;margin-top:40px}
+.small{font-size:12px;color:#94a3b8}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container">
+<h1>Lviv Tax Bonus</h1>
+<p>Міська програма подяки відповідальним платникам податків</p>
+<button onclick="scrollToForm()">Подати заявку</button>
+</div>
+</header>
+
+<section>
+<div class="container">
+<h2>Як працює програма</h2>
+<div class="cards">
+<div class="card">
+<h3>1</h3>
+<p>Сплачуйте податки у Львівській громаді</p>
+</div>
+<div class="card">
+<h3>2</h3>
+<p>Зареєструйтесь у програмі Lviv Tax Bonus</p>
+</div>
+<div class="card">
+<h3>3</h3>
+<p>Отримуйте партнерські бонуси та спеціальні пропозиції</p>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2>Підтримуємо ветеранський бізнес</h2>
+<p>Програма спрямована на підтримку локального підприємництва та ветеранських ініціатив через партнерські бонусні пропозиції.</p>
+</div>
+</section>
+
+<section id="formSection">
+<div class="container">
+<h2>Реєстрація учасника</h2>
+
+<form onsubmit="submitForm(event)">
+<input placeholder="Ім'я" required>
+<input placeholder="Прізвище" required>
+<input placeholder="Телефон" required>
+<input placeholder="Email" required>
+
+<select required>
+<option value="">Тип платника</option>
+<option>ФОП</option>
+<option>Найманий працівник</option>
+<option>Власник нерухомості</option>
+<option>Інше</option>
+</select>
+
+<input placeholder="РНОКПП (ІПН)" required>
+<input placeholder="Дата народження" required>
+<input placeholder="IBAN (за наявності)">
+
+<label>
+<input type="checkbox" required>
+Підтверджую що є платником податків Львівської МТГ
+</label>
+
+<label>
+<input type="checkbox" required>
+Погоджуюсь на обробку персональних даних
+</label>
+
+<button type="submit">Зареєструватись</button>
+
+<p class="small">Дані використовуються виключно в межах програми Lviv Tax Bonus.</p>
+
+</form>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2>Що отримує громада</h2>
+<div class="cards">
+<div class="card">Детінізація економіки</div>
+<div class="card">Підтримка бізнесу</div>
+<div class="card">Зростання доходів бюджету</div>
+<div class="card">Розвиток ветеранського підприємництва</div>
+</div>
+</div>
+</section>
+
+<footer>
+<p>Lviv Tax Bonus • Концепт міської програми</p>
+</footer>
+
+<script>
+function scrollToForm(){
+document.getElementById('formSection').scrollIntoView({behavior:'smooth'});
+}
+
+function submitForm(e){
+e.preventDefault();
+alert('Заявку подано (MVP демонстрація)');
+}
+</script>
+
+</body>
+</html>
